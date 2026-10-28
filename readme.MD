@@ -1,0 +1,1 @@
+This agents allows to search within the uploaded files. They query can be in a human readable language.
