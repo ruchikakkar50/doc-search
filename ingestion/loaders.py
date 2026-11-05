@@ -2,7 +2,7 @@ from langchain_community.document_loaders import PyPDFLoader
 from pathlib import Path
 
 
-class PDFLoader:
+class PDFLoaderService:
     def __init__(self):
         pass
     def load_pdf(self, file_path: str) -> list[str]:
@@ -22,6 +22,7 @@ class PDFLoader:
         for pdf_file in pdf_files:
             loader = PyPDFLoader(str(pdf_file))
             documents.extend(loader.load())
+        return documents
         
     
 

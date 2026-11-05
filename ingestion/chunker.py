@@ -1,7 +1,7 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 
-class DocumentChunker:
+class DocumentChunkerService:
     def __init__(self, 
                  chunk_size: int = 1000,
                  chunk_overlap: int = 200

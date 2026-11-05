@@ -6,14 +6,14 @@ client = QdrantClient(
     url="http://localhost:6333"
 )
 
-COLLECTION_NAME = "business-docs"
+
 
 class QdrantStore:
     def __init__(self,
-                 url: str = "http://localhost:6333",
-                 collection_name: str = COLLECTION_NAME,
-                 vector_size: int = 1536):
-        self.client = QdrantClient(url=url)
+                 collection_name: str,
+                 vector_size: int):
+        self.url = "http://localhost:6333"
+        self.client = QdrantClient(url=self.url)
         self.collection_name = collection_name
         self.vector_size = vector_size
 
